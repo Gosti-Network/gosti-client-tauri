@@ -1,5 +1,5 @@
 import { invoke } from "@tauri-apps/api/tauri";
-import { Grid, ButtonBase, Typography, styled } from "@mui/material";
+import { Grid, ButtonBase, Typography, styled, Button } from "@mui/material";
 import "./App.css";
 
 function App() {
@@ -27,6 +27,24 @@ function App() {
       title: "Publishing",
       url: "../resources/apps/gosti-marketplace-publishing-dapp/index.html",
       logo: "../resources/apps/gosti-marketplace-publishing-dapp/icon.webp",
+    },
+    {
+      name: "gosti-profile",
+      title: "Profile",
+      url: "../resources/apps/gosti-profile-app/index.html",
+      logo: "../resources/apps/gosti-profile-app/icon.webp",
+    },
+    {
+      name: "chia-poker",
+      title: "Chia Poker", 
+      url: "../resources/apps/chia-poker/index.html", 
+      logo: "../resources/apps/chia-poker/icon.webp"
+    },
+    {
+      name: "gosti-streaming-tools",
+      title: "Streaming Tools",
+      url: "../resources/apps/gosti-streaming-tools/index.html",
+      logo: "../resources/apps/gosti-streaming-tools/icon.webp",
     },
     {
       name: "about-gosti",
@@ -141,10 +159,6 @@ function App() {
           ))}
         </Grid>
       </div>
-      {/* <Button variant="contained" onClick={async () => {
-        const config = await invoke("make_chia_rpc_call", {command: "get_current_derivation_index", params: {}});
-        console.log("ASdf", config);
-      }}>Test</Button> */}
     </div>
   );
 }
